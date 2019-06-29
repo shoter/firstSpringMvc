@@ -4,8 +4,7 @@ build:
 build-image: build
 	mkdir -p docker/app
 	cp target/firstSpringMvc*war docker/app/app.war
-	cd docker
-	docker build -t first-spring-mvc
+	docker build -t first-spring-mvc docker/
 
 docker: build-image
 	docker rm first-spring-mvc
